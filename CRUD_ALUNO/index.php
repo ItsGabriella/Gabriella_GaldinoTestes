@@ -40,7 +40,7 @@
             </tr>
         </table>
         <hr>
-        <p align="center" class="text-info bg-dark">Prof. Sergio Luiz da Silveira</p>
+        <p align="center" class="text-info bg-dark" id="texto">Prof. Sergio Luiz da Silveira</p>
         <!-- <p align="center">Prof. Sergio Luiz da Silveira</p>  -->
 </body>
 </html>
