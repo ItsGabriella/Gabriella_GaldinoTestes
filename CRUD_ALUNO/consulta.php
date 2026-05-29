@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Listar</title>
 </head>
 <body style="font-family: helvetica;">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                <div class="text-center mt-0">
+
+                    <a href="index.php"
+                    class="btn btn-outline-primary mx-2">
+                        Home
+                    </a>
+
+                    <a href="../CRUD_MATRICULA/formMatricula.php"
+                    class="btn btn-outline-primary mx-2">
+                        Matrícula
+                    </a>
+
+                    </div>
+                    <br>
+            <li class="nav-item" align="center">
+                <form method="POST" action="formAluno.php">
+                    <input type="submit"
+                        value="Registrar Novo Aluno"
+                        class="btn btn-primary">
+                </form>
+            </li>
+            <br>
+
+            <li class="nav-item" align="center">
+                <form method="POST" action="procurar.php">
+                    <input type="submit"
+                        value="Consultar Aluno"
+                        class="btn btn-primary">
+                </form>
+            </li>
+            <br>
+
+            <li class="nav-item" align="center">
+                <form method="POST" action="atualizar.php">
+                    <input type="submit"
+                        value="Atualizar Dados do Aluno"
+                        class="btn btn-primary">
+                </form>
+            </li>
+            <br>
+
+            <li class="nav-item" align="center">
+                <form method="POST" action="apagar.php">
+                    <input type="submit"
+                        value="Excluir Dados do Aluno"
+                        class="btn btn-danger">
+                </form>
+            </li>
+            <br><br><br><br><br><br><br><br>
+            <hr>
+
+            <p class="text-center text-secondary">
+                Prof. Sergio Luiz da Silveira
+            </p>
+
+
+            </ul>
+
+        </div>
+        </div>
+    </div>
+    </nav>
+
         <p align="center">
             <font size="7" face="Arial">U.C Testes de Sistemas - SENAI SC</font>
         </p>
@@ -53,38 +134,71 @@
     }
 ?>  
 
+<hr class="border border-primary border-2 my-5">
 
-<hr width="100%" align="center" size="3" color="blue">
-        <table width="400" border="0" cellspacing="0" cellspading="0" align="center">
-            <tr>
-            <td>
-                    <form method="POST" action="formAluno.php">
-                        <center><input type="submit" value="Registrar Novo Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="listar.php">
-                        <center><input type="submit" value="Listar Alunos"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="atualizar.php">
-                        <center><input type="submit" value="Atualizar Dados do  Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="apagar.php">
-                        <center><input type="submit" value="Excluir Dados do  Aluno"></center>
-                    </form>
-                </td>
-            </tr>
-        </table><br>
-        <nav align="center">
-            <a href="index.php">| Home |</a>
-            <a href="formMatricula.php"> Matricula |</a>
-        </nav>
 
-    <hr>
-    <p align="center">Prof. Sergio Luiz da Silveira</p> 
+<div class="d-flex flex-wrap justify-content-center gap-3">
+
+    <form method="POST" action="formAluno.php">
+
+        <input type="submit"
+               value="Registrar Novo Aluno"
+               class="btn btn-primary">
+
+    </form>
+
+    <form method="POST" action="listar.php">
+
+        <input type="submit"
+               value="Listar Alunos"
+               class="btn btn-primary">
+
+    </form>
+
+    <form method="POST" action="atualizar.php">
+
+        <input type="submit"
+               value="Atualizar Dados do Aluno"
+               class="btn btn-primary">
+
+    </form>
+
+    <form method="POST" action="apagar.php">
+
+        <input type="submit"
+               value="Excluir Dados do Aluno"
+               class="btn btn-danger">
+
+    </form>
+
+</div>
+
+
+<div class="text-center mt-5">
+
+    <a href="index.php"
+       class="btn btn-outline-primary mx-2">
+
+        Home
+
+    </a>
+
+    <a href="../CRUD_MATRICULA/formMatricula.php"
+       class="btn btn-outline-primary mx-2">
+
+        Matrícula
+
+    </a>
+
+</div>
+
+<hr>
+
+<p class="text-center text-secondary">
+    Prof. Sergio Luiz da Silveira
+</p>
+
+</div>
+
 </body>
 </html>
