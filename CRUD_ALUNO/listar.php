@@ -13,80 +13,103 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-<nav class="navbar bg-body-tertiary fixed-top">
-  <div class="container-fluid">
-  <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-dark bg-primary shadow-sm fixed-top">
+
+<div class="container-fluid">
+
+    <a class="navbar-brand fw-bold" href="#">
+        SENAI SC
+    </a>
+
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar">
+
+        <span class="navbar-toggler-icon"></span>
+
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
 
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+    <div class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasNavbar">
 
-            <div class="text-center mt-0">
+    <div class="offcanvas-header border-bottom">
 
-                <a href="index.php"
-                class="btn btn-outline-primary mx-2">
-                    Home
-                </a>
+        <h5 class="offcanvas-title text-primary fw-bold">
+            Menu
+        </h5>
 
-                <a href="../CRUD_MATRICULA/formMatricula.php"
-                class="btn btn-outline-primary mx-2">
-                    Matrícula
-                </a>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas">
+        </button>
+
+    </div>
+
+    <div class="offcanvas-body">
+
+        <div class="d-grid gap-3">
+
+            <a href="index.php"
+            class="btn btn-outline-primary">
+                Home
+            </a>
+
+            <a href="formMatricula.php"
+            class="btn btn-outline-primary">
+                Matrícula
+            </a>
+
+        <hr>
+                    <form method="POST" action="formAluno.php">
+
+                    <input type="submit"
+                        value="Registrar Novo Aluno"
+                        class="btn btn-primary w-100">
+
+                    </form>
+
+                    <form method="POST" action="procurar.php">
+
+                    <input type="submit"
+                        value="Consultar Aluno"
+                        class="btn btn-primary w-100">
+
+                    </form>
+
+                    <form method="POST" action="atualizar.php">
+                        <input type="submit"
+                            value="Atualizar Dados do Aluno"
+                            class="btn btn-primary w-100">
+                    </form>
+
+                    <form method="POST" action="apagar.php">
+
+                    <input type="submit"
+                        value="Apagar Dados do Aluno"
+                        class="btn btn-danger w-100">
+
+                    </form>
 
                 </div>
-                <br>
-          <li class="nav-item" align="center">
-            <form method="POST" action="formAluno.php">
-                <input type="submit"
-                    value="Registrar Novo Aluno"
-                    class="btn btn-primary">
-            </form>
-          </li>
-          <br>
 
-          <li class="nav-item" align="center">
-            <form method="POST" action="procurar.php">
-                <input type="submit"
-                    value="Consultar Aluno"
-                    class="btn btn-primary">
-            </form>
-          </li>
-          <br>
+                <div class="mt-auto pt-5">
 
-          <li class="nav-item" align="center">
-            <form method="POST" action="atualizar.php">
-                <input type="submit"
-                    value="Atualizar Dados do Aluno"
-                    class="btn btn-primary">
-            </form>
-          </li>
-          <br>
+                    <hr>
 
-          <li class="nav-item" align="center">
-            <form method="POST" action="apagar.php">
-                <input type="submit"
-                    value="Excluir Dados do Aluno"
-                    class="btn btn-danger">
-            </form>
-          </li>
-          <br><br><br><br><br><br><br><br>
-          <hr>
+                    <p class="text-center text-secondary small">
+                        Prof. Sergio Luiz da Silveira
+                    </p>
 
-            <p class="text-center text-secondary">
-                Prof. Sergio Luiz da Silveira
-            </p>
+                </div>
 
-        </ul>
+            </div>
 
-      </div>
+        </div>
+
     </div>
-  </div>
+
 </nav>
 
 <div class="container py-5">
@@ -94,6 +117,7 @@
     <div class="text-center mb-4">
 
         <h1 class="text-primary fw-bold">
+            <br>
             U.C Testes de Sistemas - SENAI SC
         </h1>
 

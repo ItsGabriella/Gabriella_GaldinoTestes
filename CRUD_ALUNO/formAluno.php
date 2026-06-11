@@ -65,10 +65,9 @@
 
             </button>
 
-
-        <div class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar">
+            <div class="offcanvas offcanvas-end"
+             tabindex="-1"
+             id="offcanvasNavbar">
 
             <div class="offcanvas-header border-bottom">
 
@@ -88,49 +87,48 @@
                 <div class="d-grid gap-3">
 
                     <a href="index.php"
-                        class="btn btn-outline-primary">
+                       class="btn btn-outline-primary">
                         Home
                     </a>
 
                     <a href="formMatricula.php"
-                        class="btn btn-outline-primary">
+                       class="btn btn-outline-primary">
                         Matrícula
                     </a>
 
                     <hr>
 
-                    <form method="POST" action="formAluno.php">
+                    <form method="POST" action="procurar.php">
+
                         <input type="submit"
-                            value="Registrar Novo Aluno"
-                            class="btn btn-primary w-100">
+                               value="Consultar Aluno"
+                               class="btn btn-primary w-100">
+
                     </form>
 
-                <li class="nav-item" align="center">
                     <form method="POST" action="listar.php">
-                        <input type="submit"
-                            value="Listar Alunos"
-                            class="btn btn-primary w-100">
-                    </form>
-                </li>
-                <br>
 
-                <li class="nav-item" align="center">
+                        <input type="submit"
+                               value="Listar Alunos"
+                               class="btn btn-primary w-100">
+
+                    </form>
+
                     <form method="POST" action="atualizar.php">
-                        <input type="submit"
-                            value="Atualizar Dados do Aluno"
-                            class="btn btn-primary w-100">
-                    </form>
-                </li>
-                <br>
 
-                <li class="nav-item" align="center">
+                        <input type="submit"
+                               value="Atualizar Dados do Aluno"
+                               class="btn btn-primary w-100">
+
+                    </form>
+
                     <form method="POST" action="apagar.php">
-                        <input type="submit"
-                            value="Excluir Dados do Aluno"
-                            class="btn btn-primary w-100">
-                    </form>
-                </li>
 
+                        <input type="submit"
+                               value="Apagar Dados do Aluno"
+                               class="btn btn-danger w-100">
+
+                    </form>
 
                 </div>
 
@@ -158,6 +156,7 @@
         <!-- Título -->
         <div class="text-center mb-4">
             <h1 class="text-primary">
+                <br>
                 U.C Testes de Sistemas - SENAI SC
             </h1>
 

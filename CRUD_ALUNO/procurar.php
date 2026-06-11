@@ -8,74 +8,73 @@
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body class="bg-light">
 
     <nav class="navbar navbar-dark bg-primary shadow-sm fixed-top">
 
-        <div class="container-fluid">
+    <div class="container-fluid">
 
-            <a class="navbar-brand fw-bold" href="#">
-                SENAI SC
-            </a>
+        <a class="navbar-brand fw-bold" href="#">
+            SENAI SC
+        </a>
 
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar">
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
 
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
 
+        </button>
+
+        <div class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar">
+
+        <div class="offcanvas-header border-bottom">
+
+            <h5 class="offcanvas-title text-primary fw-bold">
+                Menu
+            </h5>
+
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas">
             </button>
 
+        </div>
 
-            <div class="offcanvas offcanvas-end"
-                tabindex="-1"
-                id="offcanvasNavbar">
+        <div class="offcanvas-body">
 
-                <div class="offcanvas-header border-bottom">
+            <div class="d-grid gap-3">
 
-                    <h5 class="offcanvas-title text-primary fw-bold">
-                        Menu
-                    </h5>
+                <a href="index.php"
+                class="btn btn-outline-primary">
+                    Home
+                </a>
 
-                    <button type="button"
-                            class="btn-close"
-                            data-bs-dismiss="offcanvas">
-                    </button>
+                <a href="formMatricula.php"
+                class="btn btn-outline-primary">
+                    Matrícula
+                </a>
 
-                </div>
-
-                <div class="offcanvas-body">
-
-                    <div class="d-grid gap-3">
-
-                        <a href="index.php"
-                        class="btn btn-outline-primary">
-                            Home
-                        </a>
-
-                        <a href="formMatricula.php"
-                        class="btn btn-outline-primary">
-                            Matrícula
-                        </a>
-
-                        <hr>
-
+            <hr>
                         <form method="POST" action="formAluno.php">
 
-                            <input type="submit"
-                                value="Registrar Novo Aluno"
-                                class="btn btn-primary w-100">
+                        <input type="submit"
+                            value="Registrar Novo Aluno"
+                            class="btn btn-primary w-100">
 
                         </form>
 
                         <form method="POST" action="listar.php">
 
-                            <input type="submit"
-                                value="Listar Alunos"
-                                class="btn btn-primary w-100">
+                        <input type="submit"
+                            value="Listar Alunos"
+                            class="btn btn-primary w-100">
 
                         </form>
 
@@ -84,12 +83,12 @@
                                 value="Atualizar Dados do Aluno"
                                 class="btn btn-primary w-100">
                         </form>
-                        
+
                         <form method="POST" action="apagar.php">
 
-                            <input type="submit"
-                                value="Apagar Dados do Aluno"
-                                class="btn btn-danger w-100">
+                        <input type="submit"
+                            value="Apagar Dados do Aluno"
+                            class="btn btn-danger w-100">
 
                         </form>
 
@@ -112,8 +111,6 @@
         </div>
 
     </nav>
-
-
 
 
 <div class="container py-5">
