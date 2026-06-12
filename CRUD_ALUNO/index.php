@@ -24,7 +24,7 @@
                     <form method="POST" action="formAluno.php" >
                         <center>
                             <button type="submit" class="btn btn-primary">Cadastrar Aluno</button>
-                            <!-- <input type="submit" value="Cadastrar Aluno"> -->
+                           
                         </center>
                     </form>
                 </td>
@@ -32,7 +32,7 @@
                     <form method="POST" action="../CRUD_MATRICULA/formMatricula.php" >
                         <center>
                             <button type="submit" class="btn btn-primary">Cadastrar Matricula</button>
-                            <!-- <input type="submit" value="Cadastrar Matricula"> -->
+                            
                         </center>
                     </form>
                 </td>
@@ -41,6 +41,6 @@
         </table>
         <hr>
         <p align="center" class="text-info bg-dark" id="texto">Prof. Sergio Luiz da Silveira</p>
-        <!-- <p align="center">Prof. Sergio Luiz da Silveira</p>  -->
+       
 </body>
 </html>

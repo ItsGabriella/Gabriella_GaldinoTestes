@@ -153,7 +153,7 @@
 
     <div class="container py-5">
 
-        <!-- Título -->
+      
         <div class="text-center mb-4">
             <h1 class="text-primary">
                 <br>
@@ -167,7 +167,7 @@
 
         <hr class="border border-primary border-2">
 
-        <!-- Card -->
+  
         <div class="card shadow-lg border-0">
 
             <div class="card-body p-5">
@@ -176,7 +176,6 @@
                     Dados Pessoais
                 </h2>
 
-                <!-- FORM -->
                 <form method="POST" action="cadastro.php">
 
                     <div class="row mb-3">

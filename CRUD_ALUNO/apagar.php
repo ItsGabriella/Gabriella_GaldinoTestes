@@ -15,7 +15,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Navbar -->
+
 <nav class="navbar navbar-dark bg-primary shadow-sm fixed-top">
 
     <div class="container-fluid">
@@ -118,7 +118,6 @@
 
 </nav>
 
-<!-- Conteúdo -->
 <div class="container py-5 mt-5">
 
     <div class="text-center mb-4">
