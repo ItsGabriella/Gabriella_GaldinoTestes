@@ -155,7 +155,7 @@
 
 ?>
 
-        <!-- Lista -->
+
         <div class="list-group">
 
 <?php
@@ -166,7 +166,7 @@
 
             <div class="list-group-item list-group-item-action mb-3 border rounded shadow-sm">
 
-                <!-- Cabeçalho -->
+             
                 <div class="d-flex justify-content-between align-items-center mb-3">
 
                     <h5 class="text-primary mb-0">
@@ -179,7 +179,7 @@
 
                 </div>
 
-                <!-- Informações -->
+         
                 <div class="row">
 
                     <div class="col-md-6 mb-2">

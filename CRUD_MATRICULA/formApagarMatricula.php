@@ -1,4 +1,4 @@
-```php
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -287,4 +287,4 @@ if(empty($_POST["ID"])){
 
 </body>
 </html>
-```
+
