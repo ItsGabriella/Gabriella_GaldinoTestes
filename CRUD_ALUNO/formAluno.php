@@ -91,7 +91,7 @@
                         Home
                     </a>
 
-                    <a href="formMatricula.php"
+                    <a href="../CRUD_MATRICULA/formMatricula.php"
                        class="btn btn-outline-primary">
                         Matrícula
                     </a>

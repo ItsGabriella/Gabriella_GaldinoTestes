@@ -50,7 +50,7 @@
 
                 <div class="d-grid gap-3">
 
-                    <a href="index.php"
+                    <a href="../CRUD_MATRICULA/formMatricula.php"
                        class="btn btn-outline-primary">
                         Home
                     </a>

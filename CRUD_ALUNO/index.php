@@ -29,7 +29,7 @@
                     </form>
                 </td>
                 <td>
-                    <form method="POST" action="formMatricula.php" >
+                    <form method="POST" action="../CRUD_MATRICULA/formMatricula.php" >
                         <center>
                             <button type="submit" class="btn btn-primary">Cadastrar Matricula</button>
                             <!-- <input type="submit" value="Cadastrar Matricula"> -->

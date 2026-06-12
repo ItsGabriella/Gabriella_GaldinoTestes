@@ -1,104 +1,317 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Formulário Matricula</title>
+    <title>Cadastro de Matrícula</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body style="font-family: helvetica;">
-    <form>
-        <p align="center">
-            <font size="7">U.C Teste de Sistemas - U.C Testes de Sistemas - SENAI SC</font>
-        </p>
-    </form>
-    <h4>
-        <font color="red">
-            <center>Formulário de Cadastro do Aluno</center>
-        </font>
-    </h4>
 
-    <hr width="100%" align="center" size="3" color="blue">
-    <h1>Dados Pessoais</h1>
+<body class="bg-light">
 
-    <form method="POST" action="cadastroMatricula.php" align="center">
-        <table width="500" border="3" cellspacing="0" cellpadding="0" align="center">
-            <tr>
-                <th>Nivel</th>
-                <th>Turno</th>
-                <th>Série</th>
-                <th>* Cursos Extra Curriculares</th>
-            </tr>
-            <tr>
-                <td>
-                    <input type="radio" name="nivel" value="Integrado">Integrado<br>
-                    <input type="radio" name="nivel" value="Sub-Seq">Sub-Seq<br>
-                </td>
-                <td align="left">
-                    <input type="radio" name="turno" value="Manha">Manhã<br>
-                    <input type="radio" name="turno" value="Tarde">Tarde<br>
-                    <input type="radio" name="turno" value="Noite">Noite<br>
-                </td>
-                <td>
-                    <select name="serie" size="1">
-                        <option></option>
-                        <option>1°</option>
-                        <option>2°</option>
-                        <option>3°</option>
-                    </select><br>
-                </td>
-                <td align="left">
-                    <input type="radio" name="extraCurso" value="Musica">Musica<br>
-                    <input type="radio" name="extraCurso" value="Judo">Judo<br>
-                    <input type="radio" name="extraCurso" value="Balet">Balet<br>
-                    <input type="radio" name="extraCurso" value="Pintura">Pintura<br>
-                    <strong>* Escolha apenas uma opção</strong>
-                </td>
-            </tr>
-        </table><br>
-        <input type="submit" value="Cadastrar Matricula">
-        <input type="reset" value="Limpar Dados">
-    </form>
-    <hr width="100%" align="center" size="3" color="blue">
-    <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
-        <tr>
-            <td>
-                <form method="POST" action="listarMatricula.php">
-                    <center>
-                        <input type="submit" value="Listar Matriculas">
-                    </center>
-                </form>
-            </td>
-            <td>
-                <form method="POST" action="procurarMatricula.php">
-                    <center>
-                        <input type="submit" value="Consultar Matricula">
-                    </center>
-                </form>
-            </td>
-            <td>
-                <form method="POST" action="atualizarMatricula.php">
-                    <center>
-                        <input type="submit" value="Atualizar Dados da Matricula Matricula">
-                    </center>
-                </form>
-            </td>
-            <td>
-                <form method="POST" action="apagarMatricula.php">
-                    <center>
-                        <input type="submit" value="Excluir Dados da Matricula Matricula">
-                    </center>
-                </form>
-            </td>
-        </tr>
-    </table> <br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <nav align="center">
-        <a href="index.php">| Home | </a>
-        <a href="formAluno.php">Aluno |</a>
-    </nav>
-    <hr>
-    <p align="center">Prof. Sergio Luiz da Silveira</p>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-primary shadow-sm fixed-top">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand fw-bold" href="#">
+            SENAI SC
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="offcanvas offcanvas-end"
+             tabindex="-1"
+             id="offcanvasNavbar">
+
+            <div class="offcanvas-header border-bottom">
+
+                <h5 class="offcanvas-title text-primary fw-bold">
+                    Menu
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas">
+                </button>
+
+            </div>
+
+            <div class="offcanvas-body">
+
+                <div class="d-grid gap-3">
+
+                    <a href="../CRUD_ALUNO/index.php"
+                       class="btn btn-outline-primary">
+                        Home
+                    </a>
+
+                    <a href="../CRUD_ALUNO/formAluno.php"
+                       class="btn btn-outline-primary">
+                        Aluno
+                    </a>
+
+                    <hr>
+
+                    <form method="POST" action="listarMatricula.php">
+                        <input type="submit"
+                               value="Listar Matrículas"
+                               class="btn btn-primary w-100">
+                    </form>
+
+                    <form method="POST" action="procurarMatricula.php">
+                        <input type="submit"
+                               value="Consultar Matrícula"
+                               class="btn btn-primary w-100">
+                    </form>
+
+                    <form method="POST" action="atualizarMatricula.php">
+                        <input type="submit"
+                               value="Atualizar Matrícula"
+                               class="btn btn-primary w-100">
+                    </form>
+
+                    <form method="POST" action="apagarMatricula.php">
+                        <input type="submit"
+                               value="Excluir Matrícula"
+                               class="btn btn-danger w-100">
+                    </form>
+
+                </div>
+
+                <div class="mt-auto pt-5">
+
+                    <hr>
+
+                    <p class="text-center text-secondary small">
+                        Prof. Sergio Luiz da Silveira
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container py-5 mt-5">
+
+    <div class="text-center mb-4">
+
+        <h1 class="text-primary fw-bold">
+            U.C Testes de Sistemas - SENAI SC
+        </h1>
+
+        <h3 class="text-primary">
+            Formulário de Cadastro de Matrícula
+        </h3>
+
+    </div>
+
+    <hr class="border border-primary border-2">
+
+    <div class="card border-0 shadow-lg mt-4">
+
+        <div class="card-body p-5">
+
+            <h2 class="text-center text-primary mb-4">
+                Dados da Matrícula
+            </h2>
+
+        <div class="card-body p-4">
+
+            <form method="POST" action="cadastroMatricula.php">
+
+                <div class="row">
+
+                    <!-- Nível -->
+                    <div class="col-md-3 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Nível
+                        </label>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="nivel"
+                                   value="Integrado">
+
+                            <label class="form-check-label">
+                                Integrado
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="nivel"
+                                   value="Sub-Seq">
+
+                            <label class="form-check-label">
+                                Sub-Seq
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <!-- Turno -->
+                    <div class="col-md-3 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Turno
+                        </label>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="turno"
+                                   value="Manha">
+
+                            <label class="form-check-label">
+                                Manhã
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="turno"
+                                   value="Tarde">
+
+                            <label class="form-check-label">
+                                Tarde
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="turno"
+                                   value="Noite">
+
+                            <label class="form-check-label">
+                                Noite
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <!-- Série -->
+                    <div class="col-md-3 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Série
+                        </label>
+
+                        <select class="form-select"
+                                name="serie">
+
+                            <option value=""></option>
+                            <option>1°</option>
+                            <option>2°</option>
+                            <option>3°</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Cursos -->
+                    <div class="col-md-3 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Curso Extra Curricular
+                        </label>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="extraCurso"
+                                   value="Musica">
+
+                            <label class="form-check-label">
+                                Música
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="extraCurso"
+                                   value="Judo">
+
+                            <label class="form-check-label">
+                                Judô
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="extraCurso"
+                                   value="Balet">
+
+                            <label class="form-check-label">
+                                Balé
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="extraCurso"
+                                   value="Pintura">
+
+                            <label class="form-check-label">
+                                Pintura
+                            </label>
+                        </div>
+
+                        <small class="text-danger">
+                            * Escolha apenas uma opção
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+
+                <div class="text-center">
+
+                    <input type="reset"
+                        value="Limpar Dados"
+                        class="btn btn-outline-primary px-4">
+
+                    <input type="submit"
+                        value="Cadastrar Aluno"
+                        class="btn btn-primary px-4">
+                    </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>
